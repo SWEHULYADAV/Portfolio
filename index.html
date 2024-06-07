@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+    background-color: #f8f8f8; /* Default background color */
+    color: #333; /* Default text color */
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Logo styles */
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+/* Burger menu styles */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Content section styles */
+.content {
+    padding: 20px;
+}
+
+/* Project section styles */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Theme options styles */
+.theme-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.theme-option {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Button styles */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hover effect */
+.hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #333;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Responsive project section */
+    .projects {
+        justify-content: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
+
+/* CSS styles will be pasted here */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Your Name</h1>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Hero section -->
+        <section id="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Front-end Developer | UI/UX Designer</p>
+            <!-- Call-to-action button -->
+            <a href="#contact" class="btn">Contact Me</a>
+        </section>
+
+        <!-- Resume section -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Brief summary or objective statement here.</p>
+            <h3>Education</h3>
+            <p>Your education details.</p>
+            <h3>Work Experience</h3>
+            <p>Your work experience details.</p>
+            <h3>Skills</h3>
+            <p>Your skills and expertise.</p>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Face Detection Attendance System</h3>
+                    <p>A machine learning-based attendance system that recognizes faces and stores them in a database.</p>
+                </div>
+                <div class="project">
+                    <h3>Personal News Aggregator System</h3>
+                    <p>A news aggregator that fetches news using a news API and presents it using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="project">
+                    <h3>Fake News Detection System</h3>
+                    <p>A machine learning model that detects fake news and provides a description of the project.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 4</h3>
+                    <p>Description of Project 4.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: your.email@gmail.com</p>
+            <p>Phone: +1234567890</p>
+            <p>GitHub: <a href="https://github.com/yourgithubid">yourgithubid</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedinid">yourlinkedinid</a></p>
+            <p>Naukri.com: <a href="https://www.naukri.com/profile/yournaukriid">yournaukriid</a></p>
+            <p>YouTube: <a href="https://www.youtube.com/channel/yourchannelid">yourchannelid</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <div class="font-customization">
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color" value="#000000">
+        <label for="font-size">Font Size:</label>
+        <input type="number" id="font-size" value="16">
+        <label for="font-family">Font Family:</label>
+        <select id="font-family">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Tahoma">Tahoma</option>
+        </select>
+    </div>
+
+    <div class="theme-options">
+        <div class="theme-option" style="background: linear-gradient(to right,#ff416c, #ff4b2b);" data-theme="theme1"></div>
+        <div class="theme-option" style="background: linear-gradient(to right, #00d2ff, #3a7bd5);" data-theme="theme2"></div>
+        <div class="theme-option" style="background: linear-gradient(to right, #fc00ff, #00dbde);" data-theme="theme3"></div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const themeOptions = document.querySelectorAll(".theme-option");
+    const body = document.querySelector("body");
+    const fontColorInput = document.querySelector("#font-color");
+    const fontSizeInput = document.querySelector("#font-size");
+    const fontFamilyInput = document.querySelector("#font-family");
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
+    const buttons = document.querySelectorAll(".btn");
+
+    // Function to change theme
+    function changeTheme(theme) {
+        body.className = ""; // Reset body classes
+        body.classList.add(theme);
+    }
+
+    // Event listener for theme options
+    themeOptions.forEach(option => {
+        option.addEventListener("click", function () {
+            const theme = this.dataset.theme;
+            changeTheme(theme);
+        });
+    });
+
+    // Font customization
+    fontColorInput.addEventListener("input", function () {
+        body.style.color = this.value;
+    });
+
+    fontSizeInput.addEventListener("input", function () {
+        body.style.fontSize = this.value + "px";
+    });
+
+    fontFamilyInput.addEventListener("change", function () {
+        body.style.fontFamily = this.value;
+    });
+
+    // Hamburger menu functionality
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("nav-active");
+
+        // Burger animation
+        burger.classList.toggle("toggle");
+    });
+
+    // Hover effect on buttons
+    buttons.forEach(button => {
+        button.addEventListener("mouseenter", function () {
+            this.classList.add("hover");
+        });
+
+        button.addEventListener("mouseleave", function () {
+            this.classList.remove("hover");
+        });
+    });
+});
+
+        // JavaScript code will be pasted here
+    </script>
+</body>
+
+</html>
